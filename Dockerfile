@@ -1,4 +1,4 @@
-FROM alpine-base-openshift
+FROM weslleycamilo/alpine-base-openshift
 
 MAINTAINER fehguy
 
