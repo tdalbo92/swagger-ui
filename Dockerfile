@@ -14,8 +14,6 @@ ENV OAUTH_ADDITIONAL_PARAMS "**None**"
 ENV SWAGGER_JSON "/app/swagger.json"
 ENV PORT 80
 
-RUN rm /etc/nginx/conf.d/default.conf
-
 COPY nginx.conf /etc/nginx/
 
 # copy swagger files to the `/js` folder
