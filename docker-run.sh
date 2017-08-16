@@ -2,7 +2,7 @@
 
 set -e
 
-NGINX_ROOT=/nginx/html
+NGINX_ROOT=/usr/lib/nginx/html
 INDEX_FILE=$NGINX_ROOT/index.html
 
 replace_in_index () {
