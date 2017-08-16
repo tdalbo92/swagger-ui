@@ -20,12 +20,12 @@ RUN mkdir -p /run/nginx
 COPY nginx.conf /etc/nginx/
 
 # Let's see if we can avoid running as root
-RUN mkdir -p /usr/lib/nginx
+RUN mkdir -p /usr/local/lib/nginx
 
 # copy swagger files to the `/js` folder
-ADD ./dist/* /usr/lib/nginx/html/
-ADD ./docker-run.sh /usr/lib/nginx/
+ADD ./dist/* /usr/local/lib/nginx/html/
+ADD ./docker-run.sh /usr/local/lib/nginx/
 
 EXPOSE 8080
 
-CMD ["sh", "/usr/lib/nginx/docker-run.sh"]
+CMD ["sh", "/usr/local/lib/nginx/docker-run.sh"]
