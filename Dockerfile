@@ -28,4 +28,4 @@ ADD ./docker-run.sh /usr/lib/nginx/
 
 EXPOSE 8080
 
-CMD ["sh", "/nginx/docker-run.sh"]
+CMD ["sh", "/usr/lib/nginx/docker-run.sh"]
