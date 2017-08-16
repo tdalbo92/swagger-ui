@@ -1,4 +1,4 @@
-FROM weslleycamilo/alpine-base-openshift:latest
+FROM nginx
 
 MAINTAINER tdalbo92
 
@@ -14,8 +14,7 @@ ENV OAUTH_ADDITIONAL_PARAMS "**None**"
 ENV SWAGGER_JSON "/app/swagger.json"
 ENV PORT 80
 
-RUN apk add --update nginx
-RUN mkdir -p /run/nginx
+RUN rm /etc/nginx/conf.d/default.conf
 
 COPY nginx.conf /etc/nginx/
 
@@ -25,4 +24,4 @@ ADD ./docker-run.sh /usr/share/nginx/
 
 EXPOSE 8080
 
-CMD ["sh", "/usr/share/nginx/docker-run.sh"]
+CMD ["bash", "/usr/share/nginx/docker-run.sh"]
